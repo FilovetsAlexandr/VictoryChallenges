@@ -17,42 +17,38 @@ class ChallengeViewModel: ObservableObject {
     @Published var gameCompleted: Bool = false
     
     let challenges: [Challenge] = [
-        // Физические испытания
-        Challenge(category: .physical, description: "Сделай 20 приседаний"),
-        Challenge(category: .physical, description: "Сделай 20 отжиманий"),
-        Challenge(category: .physical, description: "Сделай 20 выпадов вперед"),
-        Challenge(category: .physical, description: "Сделай 10 приседаний с прыжком"),
-        Challenge(category: .physical, description: "Сделай 20 выпадов в стороны"),
-        // Загадки
-        Challenge(category: .riddles, description: "Что можно разбить, не касаясь его? (Обещание)"),
-        Challenge(category: .riddles, description: "Меня можно бросить, но нельзя удержать. Что это? (Взгляд)"),
-        Challenge(category: .riddles, description: "Я всегда голоден, я всегда хочу есть, но если меня покормить, я умру. Что это? (Огонь)"),
-        Challenge(category: .riddles, description: "Что всегда перед вами, но не видно? (Будущее)"),
-        Challenge(category: .riddles, description: "Что можно поймать, но нельзя бросить? (Простуда)"),
-        // Шутки
-        Challenge(category: .jokes, description:
-                    "Позвони другу и скажи, что случайно отправил ему очень важное сообщение по ошибке. Попроси его срочно проверить и перезвонить тебе"),
-        Challenge(category: .jokes, description:
-                    "Напиши другу, что выиграл крупную сумму в лотерею и планируешь купить остров"),
-        Challenge(category: .jokes, description:
-                    "Начните необычный разговор по телефону: Нет, извините, я не могу стать космонавтом, у меня есть аллергия на космос"),
-        Challenge(category: .jokes, description:
-                    "Попросите кого-то сказать длинное или сложное слово, а затем постоянно просите его повторить это слово, делая вид, что вы не расслышали"),
-        Challenge(category: .jokes, description:
-                    "Начните задавать простые загадки своим друзьям, но каждый раз, когда они дают правильный ответ, говорите, что это неправильно."),
-        // Личностные вопросы
-        Challenge(category: .personalQuestions, description: "Какое место в мире ты мечтаешь посетить и почему?"),
-        Challenge(category: .personalQuestions, description: "Какое качество ты больше всего ценишь в людях?"),
-        Challenge(category: .personalQuestions, description: "Какой самый смелый поступок ты совершил в своей жизни?"),
-        Challenge(category: .personalQuestions, description: "Если бы у тебя была возможность изменить одно событие в своей жизни, что бы это было?"),
-        Challenge(category: .personalQuestions, description: "Какое твое любимое время года и почему?"),
-        // Познание друзей
-        Challenge(category: .friendsKnowledge, description: "Кто из нас самый смелый?"),
-        Challenge(category: .friendsKnowledge, description: "Какой момент в нашей дружбе ты считаешь самым запоминающимся?"),
-        Challenge(category: .friendsKnowledge, description: "Какое одно качество ты ценишь больше всего в каждом из нас?"),
-        Challenge(category: .friendsKnowledge, description: "Если бы ты мог провести один день в роли одного из нас, кого бы ты выбрал и почему?"),
-        Challenge(category: .friendsKnowledge, description: "Если бы ты мог описать каждого из нас одним словом, что бы это было?")
+        // Physical Challenges
+        Challenge(category: .physical, description: "Do 20 squats"),
+        Challenge(category: .physical, description: "Do 20 push-ups"),
+        Challenge(category: .physical, description: "Do 20 forward lunges"),
+        Challenge(category: .physical, description: "Do 10 jump squats"),
+        Challenge(category: .physical, description: "Do 20 side lunges"),
+        // Riddles
+        Challenge(category: .riddles, description: "What can be broken without being touched? (A promise)"),
+        Challenge(category: .riddles, description: "I can be thrown but not held. What am I? (A glance)"),
+        Challenge(category: .riddles, description: "I'm always hungry, I always want to eat, but if you feed me, I die. What am I? (Fire)"),
+        Challenge(category: .riddles, description: "What is always in front of you but can't be seen? (The future)"),
+        Challenge(category: .riddles, description: "What can you catch but not throw? (A cold)"),
+        // Jokes
+        Challenge(category: .jokes, description: "Call a friend and say you accidentally sent them a very important message by mistake. Ask them to check and call you back urgently"),
+        Challenge(category: .jokes, description: "Text a friend saying you won a large sum in the lottery and plan to buy an island"),
+        Challenge(category: .jokes, description: "Start a bizarre phone conversation: No, sorry, I can't become an astronaut, I'm allergic to space"),
+        Challenge(category: .jokes, description: "Ask someone to say a long or difficult word, then keep asking them to repeat it, pretending you didn't hear"),
+        Challenge(category: .jokes, description: "Start asking simple riddles to your friends, but every time they give the correct answer, say it's wrong."),
+        // Personal Questions
+        Challenge(category: .personalQuestions, description: "What place in the world do you dream of visiting and why?"),
+        Challenge(category: .personalQuestions, description: "What quality do you value most in people?"),
+        Challenge(category: .personalQuestions, description: "What's the bravest thing you've ever done?"),
+        Challenge(category: .personalQuestions, description: "If you could change one event in your life, what would it be?"),
+        Challenge(category: .personalQuestions, description: "What's your favorite season and why?"),
+        // Friends Knowledge
+        Challenge(category: .friendsKnowledge, description: "Who among us is the bravest?"),
+        Challenge(category: .friendsKnowledge, description: "What moment in our friendship do you consider the most memorable?"),
+        Challenge(category: .friendsKnowledge, description: "What one quality do you value most in each of us?"),
+        Challenge(category: .friendsKnowledge, description: "If you could spend one day as one of us, who would you choose and why?"),
+        Challenge(category: .friendsKnowledge, description: "If you could describe each of us in one word, what would it be?")
     ]
+
     
     var askedChallenges: [Challenge] = []
     var currentPlayerIndex: Int = 0

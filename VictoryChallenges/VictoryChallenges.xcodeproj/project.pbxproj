@@ -26,6 +26,13 @@
 		F4FD64872C6257E40076B731 /* puzzle.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64862C6257E40076B731 /* puzzle.json */; };
 		F4FD64892C625A930076B731 /* person.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64882C625A930076B731 /* person.json */; };
 		F4FD648D2C6351F80076B731 /* UIViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD648C2C6351F80076B731 /* UIViewControllerRepresentable.swift */; };
+		F4FD648F2C6360140076B731 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD648E2C6360140076B731 /* ResultsView.swift */; };
+		F4FD64912C6365050076B731 /* vesi.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64902C6365050076B731 /* vesi.json */; };
+		F4FD64932C63659A0076B731 /* palec_down.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64922C63659A0076B731 /* palec_down.json */; };
+		F4FD64952C6365B50076B731 /* palec_up.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64942C6365B50076B731 /* palec_up.json */; };
+		F4FD64972C6366F20076B731 /* chel.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64962C6366F20076B731 /* chel.json */; };
+		F4FD64992C6367D30076B731 /* chasi.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64982C6367D30076B731 /* chasi.json */; };
+		F4FD649D2C6372400076B731 /* medal.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD649C2C6372400076B731 /* medal.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +55,13 @@
 		F4FD64862C6257E40076B731 /* puzzle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = puzzle.json; sourceTree = "<group>"; };
 		F4FD64882C625A930076B731 /* person.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = person.json; sourceTree = "<group>"; };
 		F4FD648C2C6351F80076B731 /* UIViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		F4FD648E2C6360140076B731 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		F4FD64902C6365050076B731 /* vesi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vesi.json; sourceTree = "<group>"; };
+		F4FD64922C63659A0076B731 /* palec_down.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = palec_down.json; sourceTree = "<group>"; };
+		F4FD64942C6365B50076B731 /* palec_up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = palec_up.json; sourceTree = "<group>"; };
+		F4FD64962C6366F20076B731 /* chel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chel.json; sourceTree = "<group>"; };
+		F4FD64982C6367D30076B731 /* chasi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chasi.json; sourceTree = "<group>"; };
+		F4FD649C2C6372400076B731 /* medal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medal.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,7 @@
 				F4DCC0652C621E5B00E61E4D /* ChallengeView.swift */,
 				F4DCC0672C62202400E61E4D /* PlayerNamesView.swift */,
 				F4DCC0702C6232EF00E61E4D /* LottieAnimationViews.swift */,
+				F4FD648E2C6360140076B731 /* ResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +157,12 @@
 		F4DCC06D2C62314200E61E4D /* json */ = {
 			isa = PBXGroup;
 			children = (
+				F4FD649C2C6372400076B731 /* medal.json */,
+				F4FD64982C6367D30076B731 /* chasi.json */,
+				F4FD64962C6366F20076B731 /* chel.json */,
+				F4FD64942C6365B50076B731 /* palec_up.json */,
+				F4FD64922C63659A0076B731 /* palec_down.json */,
+				F4FD64902C6365050076B731 /* vesi.json */,
 				F4FD64882C625A930076B731 /* person.json */,
 				F4FD64862C6257E40076B731 /* puzzle.json */,
 				F4DCC0772C6244B900E61E4D /* settings.json */,
@@ -223,9 +244,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FD64992C6367D30076B731 /* chasi.json in Resources */,
+				F4FD64972C6366F20076B731 /* chel.json in Resources */,
 				F4FD64892C625A930076B731 /* person.json in Resources */,
 				F4FD64872C6257E40076B731 /* puzzle.json in Resources */,
+				F4FD64952C6365B50076B731 /* palec_up.json in Resources */,
+				F4FD649D2C6372400076B731 /* medal.json in Resources */,
 				F4DCC0782C6244BA00E61E4D /* settings.json in Resources */,
+				F4FD64932C63659A0076B731 /* palec_down.json in Resources */,
+				F4FD64912C6365050076B731 /* vesi.json in Resources */,
 				F4DCC0522C621BDD00E61E4D /* Preview Assets.xcassets in Resources */,
 				F4DCC0732C62367000E61E4D /* joystick.json in Resources */,
 				F4DCC04F2C621BDD00E61E4D /* Assets.xcassets in Resources */,
@@ -241,6 +268,7 @@
 			files = (
 				F4DCC0602C621E0000E61E4D /* SettingsView.swift in Sources */,
 				F4DCC05A2C621CF500E61E4D /* ChallengeCategory.swift in Sources */,
+				F4FD648F2C6360140076B731 /* ResultsView.swift in Sources */,
 				F4DCC04D2C621BDA00E61E4D /* ContentView.swift in Sources */,
 				F4DCC0642C621E3D00E61E4D /* PlayerSelectionView.swift in Sources */,
 				F4DCC0662C621E5B00E61E4D /* ChallengeView.swift in Sources */,

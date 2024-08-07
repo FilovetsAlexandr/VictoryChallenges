@@ -8,11 +8,11 @@
 import Foundation
 
 enum ChallengeCategory: String, Identifiable, CaseIterable {
-    case physical = "Физические вызовы"
-    case riddles = "Загадки"
-    case jokes = "Шутки и розыгрыши"
-    case personalQuestions = "Личностные вопросы"
-    case friendsKnowledge = "Познание друзей"
+    case physical = "Physical Challenges"
+    case riddles = "Riddles"
+    case jokes = "Jokes and Pranks"
+    case personalQuestions = "Personal Questions"
+    case friendsKnowledge = "Friends Knowledge"
 
     var id: String { self.rawValue }
 }

@@ -61,6 +61,7 @@ struct CategorySelectionView: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
         .customBackButton()
     }
 }

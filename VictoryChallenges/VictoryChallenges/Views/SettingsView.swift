@@ -65,6 +65,7 @@ struct SettingsView: View {
                 .scaledToFill()
                 .ignoresSafeArea()
         )
+        .navigationBarBackButtonHidden(true)
         .customBackButton()
     }
 }

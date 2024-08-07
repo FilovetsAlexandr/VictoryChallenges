@@ -12,7 +12,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = ChallengeViewModel()
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 20) {
                 Text("Victory Challenges")
                     .font(.largeTitle)
@@ -62,6 +62,7 @@ struct ContentView: View {
                     .ignoresSafeArea()
             )
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
