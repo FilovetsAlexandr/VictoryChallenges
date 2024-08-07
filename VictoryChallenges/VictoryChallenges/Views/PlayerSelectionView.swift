@@ -58,6 +58,7 @@ struct PlayerSelectionView: View {
             }
             .padding()
         }
+        .navigationBarBackButtonHidden(true)
         .customBackButton()
     }
 }
