@@ -50,7 +50,7 @@ struct CategorySelectionView: View {
                         Image(systemName: "chevron.right.circle.fill")
                     }
                         .font(.title)
-                        .fontWeight(.bold)
+                        .font(.bold())
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
