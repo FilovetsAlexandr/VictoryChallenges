@@ -5,10 +5,14 @@
 //  Created by Alexandr Filovets on 6.08.24.
 //
 
+import MessageUI
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var isShowingMailView = false
+    @State private var mailResult: Result<MFMailComposeResult, Error>? = nil
 
     var body: some View {
         VStack(spacing: 20) {
@@ -25,7 +29,9 @@ struct SettingsView: View {
                 .frame(width: 300, height: 300)
 
             Button {
-                // Add functionality for rating
+                if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                    SKStoreReviewController.requestReview(in: scene)
+                }
             } label: {
                 HStack {
                     Text("Rate Us")
@@ -41,23 +47,23 @@ struct SettingsView: View {
             }
 
             Button {
-                // Add functionality for contacting
+                isShowingMailView = true
             } label: {
                 HStack {
                     Text("Contact Us")
                     Image(systemName: "person.circle")
                 }
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.black)
-                        .cornerRadius(30)
-                        .padding(.horizontal)
-                
+                .font(.title2)
+                .foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.black)
+                .cornerRadius(30)
+                .padding(.horizontal)
             }
+            .disabled(!MFMailComposeViewController.canSendMail()) // Отключает кнопку, если отправка почты невозможна
+
             Spacer()
-                
         }
         .background(
             Image("background_settings")
@@ -67,8 +73,12 @@ struct SettingsView: View {
         )
         .navigationBarBackButtonHidden(true)
         .customBackButton()
+        .sheet(isPresented: $isShowingMailView) {
+            MailView(result: $mailResult)
+        }
     }
 }
+
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
