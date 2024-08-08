@@ -33,6 +33,7 @@
 		F4FD64972C6366F20076B731 /* chel.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64962C6366F20076B731 /* chel.json */; };
 		F4FD64992C6367D30076B731 /* chasi.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD64982C6367D30076B731 /* chasi.json */; };
 		F4FD649D2C6372400076B731 /* medal.json in Resources */ = {isa = PBXBuildFile; fileRef = F4FD649C2C6372400076B731 /* medal.json */; };
+		F4FD64AF2C650BA10076B731 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FD64AE2C650BA10076B731 /* MailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		F4FD64962C6366F20076B731 /* chel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chel.json; sourceTree = "<group>"; };
 		F4FD64982C6367D30076B731 /* chasi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chasi.json; sourceTree = "<group>"; };
 		F4FD649C2C6372400076B731 /* medal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medal.json; sourceTree = "<group>"; };
+		F4FD64AE2C650BA10076B731 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				F4DCC0672C62202400E61E4D /* PlayerNamesView.swift */,
 				F4DCC0702C6232EF00E61E4D /* LottieAnimationViews.swift */,
 				F4FD648E2C6360140076B731 /* ResultsView.swift */,
+				F4FD64AE2C650BA10076B731 /* MailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				F4FD648F2C6360140076B731 /* ResultsView.swift in Sources */,
 				F4DCC04D2C621BDA00E61E4D /* ContentView.swift in Sources */,
 				F4DCC0642C621E3D00E61E4D /* PlayerSelectionView.swift in Sources */,
+				F4FD64AF2C650BA10076B731 /* MailView.swift in Sources */,
 				F4DCC0662C621E5B00E61E4D /* ChallengeView.swift in Sources */,
 				F4DCC05E2C621D9800E61E4D /* ChallengeViewModel.swift in Sources */,
 				F4DCC04B2C621BDA00E61E4D /* VictoryChallengesApp.swift in Sources */,
@@ -409,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VictoryChallenges/Preview Content\"";
@@ -427,7 +432,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = by.com.victory.challenges.app;
+				PRODUCT_BUNDLE_IDENTIFIER = by.com.victory.challenges.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -445,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VictoryChallenges/Preview Content\"";
@@ -463,7 +469,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = by.com.victory.challenges.app;
+				PRODUCT_BUNDLE_IDENTIFIER = by.com.victory.challenges.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
