@@ -9,6 +9,10 @@ import SwiftUI
 import Lottie
 
 struct LottieAnimationViews: UIViewRepresentable {
+    func updateUIView(_ uiView: UIView, context: Context) {
+        // update if u need
+    }
+    
     var name: String
 
     func makeUIView(context: Context) -> UIView {
