@@ -43,8 +43,7 @@ struct CategorySelectionView: View {
                     .padding(.horizontal)
                 }
                 Spacer()
-
-                NavigationLink(destination: PlayerSelectionView(viewModel: viewModel)) {
+                NavigationLink(destination: PlayerNamesView(viewModel: viewModel)) {
                     HStack {
                         Text("Next")
                         Image(systemName: "chevron.right.circle.fill")
@@ -54,9 +53,10 @@ struct CategorySelectionView: View {
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.black)
+                        .background(viewModel.selectedCategory != nil ? Color.black : Color.black.opacity(0.5))
                         .cornerRadius(30)
                 }
+                .disabled(viewModel.selectedCategory == nil)
                 .padding(.horizontal)
             }
             .padding()
@@ -66,8 +66,9 @@ struct CategorySelectionView: View {
     }
 }
 
-//struct CategorySelectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategorySelectionView(viewModel: ChallengeViewModel())
-//    }
-//}
+
+struct CategorySelectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        CategorySelectionView(viewModel: ChallengeViewModel())
+    }
+}

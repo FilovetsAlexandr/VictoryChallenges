@@ -10,7 +10,6 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel = ChallengeViewModel()
-
     var body: some View {
         NavigationStack {
             VStack(spacing: 20) {
@@ -25,7 +24,7 @@ struct ContentView: View {
 
                 LottieAnimationViews(name: "joystick")
                     .frame(width: 300, height: 300)
-                
+
                 NavigationLink(destination: CategorySelectionView(viewModel: viewModel)) {
                     HStack {
                         Text("Play")
@@ -39,18 +38,18 @@ struct ContentView: View {
                     .cornerRadius(30)
                 }
                 .padding(.horizontal)
-                
+
                 NavigationLink(destination: SettingsView()) {
                     HStack {
                         Text("Settings")
                         Image(systemName: "gearshape.circle")
                     }
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.black)
-                        .cornerRadius(30)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.black)
+                    .cornerRadius(30)
                 }
                 .padding(.horizontal)
             }
@@ -62,7 +61,6 @@ struct ContentView: View {
                     .ignoresSafeArea()
             )
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 

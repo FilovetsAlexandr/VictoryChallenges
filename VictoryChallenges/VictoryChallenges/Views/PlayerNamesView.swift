@@ -25,15 +25,18 @@ struct PlayerNamesView: View {
                     .background(Color.white)
                     .cornerRadius(30)
 
-                LottieAnimationViews(name: "puzzle")
-                    .frame(width: 100, height: 100)
+                LottieAnimationViews(name: "person")
+                    .frame(width: 300, height: 300)
 
                 Spacer()
 
                 ForEach(0 ..< viewModel.players, id: \.self) { index in
                     TextField("Player \(index + 1)", text: Binding(
                         get: { viewModel.playerNames.indices.contains(index) ? viewModel.playerNames[index] : "" },
-                        set: { viewModel.playerNames[index] = $0 }
+                        set: {
+                            let truncatedText = String($0.prefix(10)) 
+                            viewModel.playerNames[index] = truncatedText
+                        }
                     ))
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .multilineTextAlignment(.center)
@@ -41,22 +44,23 @@ struct PlayerNamesView: View {
                     .cornerRadius(30)
                     .padding(.horizontal)
                 }
-                
+
                 Spacer()
-                
+
                 NavigationLink(destination: ChallengeView(viewModel: viewModel)) {
                     HStack {
                         Text("Start!")
                         Image(systemName: "flag.2.crossed.circle")
                     }
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.black)
-                        .cornerRadius(30)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(allNamesValid ? Color.black : Color.black.opacity(0.5))
+                    .cornerRadius(30)
                 }
+                .disabled(!allNamesValid)
                 .padding(.horizontal)
             }
             .padding()
@@ -67,7 +71,11 @@ struct PlayerNamesView: View {
             }
         }
         .customBackButton()
-        .hideKeyboardOnTap() 
+        .hideKeyboardOnTap()
+    }
+
+    private var allNamesValid: Bool {
+        viewModel.playerNames.allSatisfy { !$0.isEmpty && $0.count <= 10 }
     }
 }
 

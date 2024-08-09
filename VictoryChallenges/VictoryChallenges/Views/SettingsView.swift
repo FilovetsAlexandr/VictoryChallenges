@@ -61,7 +61,7 @@ struct SettingsView: View {
                 .cornerRadius(30)
                 .padding(.horizontal)
             }
-            .disabled(!MFMailComposeViewController.canSendMail()) // Отключает кнопку, если отправка почты невозможна
+            .disabled(!MFMailComposeViewController.canSendMail())
 
             Spacer()
         }
